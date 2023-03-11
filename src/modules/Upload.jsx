@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { UploadOutlined } from "@ant-design/icons";
 
 export default function CsvUploader() {
-  const URL = "https://vacations-n2qv.onrender.com/api/v1/data_upload";
+  const URL = "https://vacations-foht.onrender.com/api/v1/data_upload";
   const [file, setfile] = useState(null);
 
   const handleUpload = () => {
@@ -34,6 +34,7 @@ export default function CsvUploader() {
         message.error("Upload failed");
       });
     setfile(null);
+    window.location.reload();
   };
 
   const handleChange = (info) => {

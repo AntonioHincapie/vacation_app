@@ -1,4 +1,4 @@
-const URL = "https://vacations-n2qv.onrender.com/api/v1/vacations";
+const URL = "https://vacations-foht.onrender.com/api/v1/vacations";
 
 const GET_VACATIONS = "redux/vacations/vacations/GET_VACATIONS";
 

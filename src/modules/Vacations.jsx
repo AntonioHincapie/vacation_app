@@ -6,9 +6,9 @@ import CsvUploader from "./Upload";
 import column from "./components/Columns";
 
 export default function Vacations() {
+  const URL = "https://vacations-foht.onrender.com/api/v1/vacations";
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({});
   const vacations = useSelector((state) => state.vacations);
 
@@ -30,10 +30,7 @@ export default function Vacations() {
       },
       body: JSON.stringify(postBody),
     };
-    await fetch(
-      "https://vacations-n2qv.onrender.com/api/v1/vacations",
-      postVacation
-    );
+    await fetch(URL, postVacation);
     dispatch(getVacations());
     setVisible(false);
   };

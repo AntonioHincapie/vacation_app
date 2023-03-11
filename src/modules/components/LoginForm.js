@@ -3,7 +3,7 @@ import { Form, Input, Button } from "antd";
 
 export default function LoginForm() {
   const [loading, setLoading] = React.useState(false);
-  const URL = "https://vacations-n2qv.onrender.com/api/v1/auth/login";
+  const URL = "https://vacations-foht.onrender.com/api/v1/auth/login";
   const onFinish = async (values) => {
     setLoading(true);
     const requesrOptions = {
