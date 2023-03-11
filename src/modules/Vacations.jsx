@@ -14,7 +14,7 @@ export default function Vacations() {
 
   useEffect(() => {
     dispatch(getVacations());
-  }, []);
+  }, [dispatch]);
 
   const handleOk = async () => {
     const postBody = {
