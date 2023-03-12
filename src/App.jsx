@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Calendario from "./modules/Calendar";
 import LogIn from "./modules/LogIn";
 import NavBar from "./modules/NavBar";
@@ -13,6 +18,9 @@ export default function App() {
       <Routes>
         <Route element={<LogIn />} path="/login" />
         <Route element={<ProtectedRoutes />}>
+          <Route path="/">
+            <Route element={<Navigate to="/vacations" />} />
+          </Route>
           <Route element={<Vacations />} path="/vacations" />
           <Route element={<Calendario />} path="/calendar" />
         </Route>
