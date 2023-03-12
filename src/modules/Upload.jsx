@@ -4,6 +4,7 @@ import { UploadOutlined } from "@ant-design/icons";
 
 export default function CsvUploader() {
   const URL = "https://vacations-foht.onrender.com/api/v1/data_upload";
+  // const URL = "http://localhost:3000/api/v1/data_upload";
   const [file, setfile] = useState(null);
 
   const handleUpload = () => {
